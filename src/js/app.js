@@ -1,16 +1,12 @@
 import json from './parser';
 import read from './reader';
+import GameSaving from './gameSaving';
 
 export default class GameSavingLoader {
-  static load() {
-    const data = read();
-    const value = json(data);
-    return value;
-  }
+    load() {
+        console.log('Привет')
+    }
 }
 
-GameSavingLoader.load().then((saving) => {
-  // saving объект класса GameSaving
-}, (error) => {
-  // ...
-});
+const test = new GameSavingLoader();
+test.load();
