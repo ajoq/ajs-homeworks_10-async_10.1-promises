@@ -1,5 +1,4 @@
 import GameSavingLoader from './GameSavingLoader';
-import read from './reader';
 
 export default function saveGame() {
   return GameSavingLoader.load().then(
@@ -7,5 +6,3 @@ export default function saveGame() {
     (error) => new Error(`Возникла ошибка: ${error}`),
   );
 }
-
-console.log(read());
