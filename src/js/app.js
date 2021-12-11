@@ -1,7 +1,3 @@
 import GameSavingLoader from './GameSavingLoader';
 
-GameSavingLoader.load().then((saving) => {
-    console.log(JSON.parse(saving))
-  }, (error) => {
-    console.log(error)
-  });
+GameSavingLoader.load().then((saving) => JSON.parse(saving), (error) => error);
