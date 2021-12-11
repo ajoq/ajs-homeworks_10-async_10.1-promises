@@ -1,7 +1,7 @@
 import GameSavingLoader from './GameSavingLoader';
 
-export default function saveGame() {
-  return GameSavingLoader.load().then(
-    (saving) => JSON.parse(saving),
-  );
-}
+GameSavingLoader.load().then((saving) => {
+    console.log(JSON.parse(saving))
+  }, (error) => {
+    console.log(error)
+  });
