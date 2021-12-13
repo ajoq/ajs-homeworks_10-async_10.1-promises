@@ -11,8 +11,7 @@ test('GameSavingLoader', () => {
       points: 2000,
     },
   };
-  return GameSavingLoader.load().then((data) => {
-    const received = JSON.parse(data);
-    expect(received).toEqual(expected);
+  return GameSavingLoader.load().then((result) => {
+    expect(result).toEqual(expected);
   });
 });
