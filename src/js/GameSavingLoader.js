@@ -6,6 +6,6 @@ export default class GameSavingLoader {
   static load() {
     return read()
       .then((result) => (json(result)))
-      .then((result) => new GameSaving(result));
+      .then((result) => new GameSaving(JSON.parse(result)));
   }
 }
